@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: marathon
+Implementation-Version: 1.4.3
+Specification-Vendor: mesosphere.marathon
+Specification-Title: marathon
+Implementation-Vendor-Id: mesosphere.marathon
+Specification-Version: 1.4.3
+Main-Class: mesosphere.marathon.Main
+Implementation-Vendor: mesosphere.marathon
+
