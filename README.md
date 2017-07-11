@@ -31,3 +31,11 @@ sudo su
 apt-get remove openjdk-9-jre-headless
 echo server.1=$(hostname):2888:3888 >> /etc/zookeeper/conf/zoo.cfg
 ```
+
+## start with nohup
+```
+
+nohup /usr/sbin/mesos-master --ip=xx.xx.xx.xx --log_dir=/var/log/mesos --work_dir=/var/lib/mesos &
+nohup /usr/sbin/mesos-slave --master=xx.xx.xx.xx:5050 --work_dir=/var/lib/mesos & 
+nohup /usr/bin/marathon --master=xx.xx.xx.xx:5050 &
+```
