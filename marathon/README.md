@@ -13,7 +13,14 @@ https://mesosphere.github.io/marathon/docs/application-basics.html
 ```
 
 # Build from Source
-
+[release/1.4](https://github.com/mesosphere/marathon/tree/releases/1.4) documentation is better than master.
+```
+git clone https://github.com/mesosphere/marathon.git
+cd marathon
+# sbt clean package - package doesn't create the uber jar.
+sbt assembly # create the uber jar
+./bin/build-distribution # package Marathon as an executable JAR (optional): target/marathon-runnable.jar
+```
 
 # How Marathon UI Works
 
