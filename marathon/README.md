@@ -17,12 +17,27 @@ https://mesosphere.github.io/marathon/docs/application-basics.html
 ```
 git clone https://github.com/mesosphere/marathon.git
 cd marathon
+git checkout releases/1.4
 # sbt clean package - package doesn't create the uber jar.
 sbt assembly # create the uber jar
 ./bin/build-distribution # package Marathon as an executable JAR (optional): target/marathon-runnable.jar
 ```
 
 # How Marathon UI Works
+Marathon-ui is created as a separate package, and it is an dependency of marathon. After building with "sbt package", the package is downloaded at:
+```.coursier/cache/v1/https/downloads.mesosphere.com/maven/mesosphere/marathon/ui/1.2.0/ui-1.2.0.jar```
+
+The content of it can be found by:
+```
+# jar tf ~/.coursier/cache/v1/https/downloads.mesosphere.com/maven/mesosphere/marathon/ui/1.2.0/ui-1.2.0.jar
+META-INF/MANIFEST.MF
+META-INF/resources/webjars/ui/*  # python -m SimpleHTTPServer 8080 in this directory can server the UI.
+META-INF/maven/mesosphere.marathon/ui/pom.xml
+META-INF/maven/mesosphere.marathon/ui/pom.properties
+
+# unzip the file
+# jar xf ~/.coursier/cache/v1/https/downloads.mesosphere.com/maven/mesosphere/marathon/ui/1.2.0/ui-1.2.0.jar
+```
 
 
 # Customize Marathon-UI from Marthon 1.4.5
