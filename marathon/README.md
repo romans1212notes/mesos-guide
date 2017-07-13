@@ -1,7 +1,11 @@
-# Create Basic Application
+# Basic
+## Command Line flags
+https://github.com/mesosphere/marathon/blob/master/docs/docs/command-line-flags.md
+
+## Create Basic Application
 https://mesosphere.github.io/marathon/docs/application-basics.html
 
-## Simple way is to copy and paste this json
+Simple way is to copy and paste this json
 ```
 {
     "id": "basic-0", 
@@ -12,7 +16,7 @@ https://mesosphere.github.io/marathon/docs/application-basics.html
 }
 ```
 
-# Build from Source
+## Build from Source
 [release/1.4](https://github.com/mesosphere/marathon/tree/releases/1.4) documentation is better than master.
 ```
 git clone https://github.com/mesosphere/marathon.git
@@ -23,7 +27,7 @@ sbt assembly # create the uber jar
 ./bin/build-distribution # package Marathon as an executable JAR (optional): target/marathon-runnable.jar
 ```
 
-# How Marathon UI Works
+## How Marathon UI Works
 Marathon-ui is created as a separate package, and it is an dependency of marathon. After building with "sbt package", the package is downloaded at:
 ```.coursier/cache/v1/https/downloads.mesosphere.com/maven/mesosphere/marathon/ui/1.2.0/ui-1.2.0.jar```
 
