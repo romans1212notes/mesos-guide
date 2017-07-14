@@ -72,3 +72,6 @@ Which basically caculate the shasum of marathon-assembly-1.4.5.jar and put it in
 ## Lessons Learned
 * marathon-logo.png doesn't show well on Chrome (i.e. the background is not shown well, which is basically replaced with the white default background, and so white MARATHON foreground cannot be seen), but is good on Firefox.
 * Debug the UI using Chrome developer tool, e.g. edit the dynamically generated HTML (e.g. remove class, attributes)
+
+## Related Work
+https://github.com/mesosphere/marathon/issues/3884
