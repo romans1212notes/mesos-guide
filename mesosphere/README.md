@@ -1,7 +1,12 @@
 # Install with Docker
 * https://github.com/dcos/dcos-docker
-  * make
-  ```
+```
+  $ git clone https://github.com/dcos/dcos-docker
+  $ cd dcos-docker
+
+  $ ./configure --auto
+  $ make
+  
   Creating directories under /etc/mesosphere
   Creating role file for slave_public
   Configuring DC/OS
@@ -12,5 +17,5 @@
   Agent IP:  172.17.0.3
   Public Agent IP:  172.17.0.4
   Web UI: http://172.17.0.2
-  ```
+```
 * Can use nginx to export for external access
