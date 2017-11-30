@@ -19,3 +19,23 @@
   Web UI: http://172.17.0.2
 ```
 * Can use nginx to export for external access
+```
+# Config proxy
+$ sudo vim /etc/nginx/nginx.conf
+http {
+# other http configs, e.g.
+#       include /etc/nginx/conf.d/*.conf;
+#       include /etc/nginx/sites-enabled/*;
+
+        server { # simple load balancing
+          listen          10.175.20.236:80;
+          # listen          80;
+
+          location / {
+            proxy_pass      http://172.17.0.2/;
+          }
+        }
+}
+$ sudo systemctl restart nginx
+$ sudo tail -f /var/log/nginx/access.log
+```
