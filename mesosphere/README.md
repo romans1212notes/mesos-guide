@@ -39,3 +39,6 @@ http {
 $ sudo systemctl restart nginx
 $ sudo tail -f /var/log/nginx/access.log
 ```
+
+# UI
+https://github.com/dcos/dcos-ui
