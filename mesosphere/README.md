@@ -22,6 +22,7 @@
 ```
 * Can use nginx to export for external access
 ```
+$ sudo apt-get install nginx
 # Config proxy
 $ sudo vim /etc/nginx/nginx.conf
 http {
