@@ -1,4 +1,6 @@
 # Install with Docker
+* install docker
+  * https://github.com/romans1212notes/eng-notes/blob/master/docker.md#install
 * https://github.com/dcos/dcos-docker
 ```
   $ git clone https://github.com/dcos/dcos-docker
